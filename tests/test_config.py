@@ -9,6 +9,7 @@ class TestConfig(TestCase):
         print('here')
         config.config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                           "test_config.json")
+        config._config = None
 
     def test_get_config(self):
         conf = config.get_config()
