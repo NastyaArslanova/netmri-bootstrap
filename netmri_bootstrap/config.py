@@ -22,6 +22,7 @@ def get_default_config_path():
 
 def get_config():
     global config_path
+    print('here_test ', config_path)
     if config_path is None:
         config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                    "config.json.in")
