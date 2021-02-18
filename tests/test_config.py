@@ -6,10 +6,12 @@ from netmri_bootstrap import config
 class TestConfig(TestCase):
     @classmethod
     def setUpClass(klass):
+        from importlib import reload
+        import sys
+        config = reload(sys.modules['config'])
         print('here')
         config.config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                           "test_config.json")
-        config._config = None
 
     def test_get_config(self):
         conf = config.get_config()
