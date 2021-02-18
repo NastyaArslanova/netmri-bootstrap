@@ -7,10 +7,7 @@ class TestConfig(TestCase):
     @classmethod
     def setUpClass(klass):
         from importlib import reload
-        # import sys
         reload(config)
-        # print(sys.modules)
-        print('here')
         config.config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                           "test_config.json")
 
