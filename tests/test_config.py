@@ -8,7 +8,8 @@ class TestConfig(TestCase):
     def setUpClass(klass):
         from importlib import reload
         import sys
-        config = reload(sys.modules['config'])
+        # config = reload(sys.modules['config'])
+        print(sys.modules)
         print('here')
         config.config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                           "test_config.json")
