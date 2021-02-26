@@ -161,7 +161,7 @@ class SmokeTest(TestCaseBase):
         from netmri_bootstrap import config
         reload(config)
         config.config_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
-                                          "test_config.json")
+                                          "test_config_full.json")
 
     @with_httmock(authenticate_response, scripts_show, scripts_export_file)
     def test_script_import(self):
